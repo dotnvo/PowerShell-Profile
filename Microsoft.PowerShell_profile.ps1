@@ -3,15 +3,8 @@ try {
     Import-Module posh-git
 } catch {
 
-}
-If (Get-Module -name posh-git) {
-    Set-PoshPrompt -Theme ~/ohmyposh-nrvonogd.json
-    $env:POSH_GIT_ENABLED = $true
-}
-
-
+$env:POSH_GIT_ENABLED = $true
 Set-PSReadLineOption -PredictionSource History
-$VIUsername = 'nrvonogd'
 $MaximumHistoryCount = "10000"
 
 Switch ($PSVersionTable.PSVersion.Major) {
